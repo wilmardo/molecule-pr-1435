@@ -16,16 +16,15 @@ install:
   - sudo apt-get -qq update;
   - sudo apt-get -y install snapd;
   - sudo snap install lxd;
+  - sudo pip install molecule
   - sudo sh -c 'echo PATH=/snap/bin:$PATH >> /etc/environment';
   - while [ ! -S /var/snap/lxd/common/lxd/unix.socket ]; do echo "Waiting for LXD socket...";sleep 0.2;done;
-  - sudo newgrp lxd
-  - lxd init --auto;
-  - lxc config set core.https_address 127.0.0.1:8443
-  - lxc config set core.trust_password password
-  - sudo pip install molecule
+  - sudo su travis -c 'lxd init --auto';
+  - sudo su travis -c 'lxc config set core.https_address 127.0.0.1:8443'
+  - sudo su travis -c 'lxc config set core.trust_password password'
 
 script:
-  - molecule --debug converge
+  - sudo su travis -c 'molecule --debug converge'
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
