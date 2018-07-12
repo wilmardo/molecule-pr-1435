@@ -1,8 +1,6 @@
 ---
 dist: trusty
 language: python
-python:
-  - "3.6"
 sudo: required
 cache:
   pip: true
@@ -16,7 +14,7 @@ before_install:
 
 install:
   - sudo apt-get -qq update;
-  - sudo apt-get -y install snapd;
+  - sudo apt-get -y install snapd python3.5;
   - sudo snap install lxd;
   - sudo pip install molecule
   - sudo sh -c 'echo PATH=/snap/bin:$PATH >> /etc/environment';
