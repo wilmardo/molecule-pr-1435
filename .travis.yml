@@ -19,10 +19,10 @@ install:
   - sudo sh -c 'echo PATH=/snap/bin:$PATH >> /etc/environment';
   - while [ ! -S /var/snap/lxd/common/lxd/unix.socket ]; do echo "Waiting for LXD socket...";sleep 0.2;done;
   - sudo lxd init --auto;
-  - pip install molecule
+  - sudo pip install molecule
 
 script:
-  - sudo su travis -c '$HOME/.local/bin/molecule converge'
+  - sudo su travis -c 'molecule converge'
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
