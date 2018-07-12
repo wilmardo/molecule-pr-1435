@@ -1,6 +1,8 @@
 ---
 dist: trusty
 language: python
+python:
+  - "3.6"
 sudo: required
 cache:
   pip: true
@@ -9,6 +11,16 @@ env:
   global:
     - fast_finish: true
 
+services:
+  - docker
+
+addons:
+  apt:
+    sources:
+      - docker-trusty
+    packages:
+      - docker-ce
+
 before_install:
   - sudo apt-get update && sudo apt-get remove -y lxd
 
@@ -16,15 +28,15 @@ install:
   - sudo apt-get -qq update;
   - sudo apt-get -y install snapd python3.5;
   - sudo snap install lxd;
-  - sudo pip install molecule
   - sudo sh -c 'echo PATH=/snap/bin:$PATH >> /etc/environment';
   - while [ ! -S /var/snap/lxd/common/lxd/unix.socket ]; do echo "Waiting for LXD socket...";sleep 0.2;done;
   - sudo lxd init --auto;
   - sudo lxc config set core.https_address 127.0.0.1:8443
   - sudo lxc config set core.trust_password password
+  - pip install molecule
 
 script:
-  -
+  - docker run --net=host -it -v $(pwd):/data/$(basename ~+) -w /data/$(basename ~+) lansible/ansible-dev-container molecule --debug converge
   - sudo molecule --debug converge
 
 notifications:
