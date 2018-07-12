@@ -1,0 +1,119 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+
+driver:
+  name: lxd
+
+lint:
+  name: yamllint
+  options:
+    config-file: ${DEV_MOLECULE_RULES}/yaml-lint.yml
+
+platforms:
+  - name: test-AlpineEdge
+    alias: alpine/edge/amd64
+
+  - name: test-Alpine38
+    alias: alpine/3.8/amd64
+
+  - name: test-Alpine37
+    alias: alpine/3.7/amd64
+
+  - name: test-Alpine36
+    alias: alpine/3.6/amd64
+
+  - name: test-Alpine35
+    alias: alpine/3.5/amd64
+
+  - name: test-Alpine34
+    alias: alpine/3.4/amd64
+
+  - name: test-Arch
+    alias: archlinux/current/amd64
+
+  - name: test-CentOS7
+    alias: centos/7/amd64
+
+  - name: test-CentOS6
+    alias: centos/6/amd64
+
+  - name: test-DebianDev
+    alias: debian/sid/amd64
+
+  - name: test-Debian10
+    alias: debian/buster/amd64
+
+  - name: test-Debian9
+    alias: debian/stretch/amd64
+
+  - name: test-Debian8
+    alias: debian/jessie/amd64
+
+  - name: test-Debian7
+    alias: debian/wheezy/amd64
+
+  - name: test-Fedora27
+    alias: fedora/27/amd64
+
+  - name: test-Fedora26
+    alias: fedora/26/amd64
+
+  - name: test-Gentoo
+    alias: gentoo/current/amd64
+
+  - name: test-OpenSuse15
+    alias: opensuse/15.0/amd64
+
+  - name: test-OpenSuse42
+    alias: opensuse/42.3/amd64
+
+  - name: test-Oracle7
+    alias: oracle/7/amd64
+
+  - name: test-Oracle6
+    alias: oracle/6/amd64
+
+  - name: test-Plamo6
+    alias: plamo/6.x/amd64
+
+  - name: test-Plamo5
+    alias: plamo/5.x/amd64
+
+  - name: test-Sabayon
+    alias: sabayon/current/amd64
+
+  - name: test-UbuntuCore
+    alias: ubuntu-core/16/amd64
+
+  - name: test-Ubuntu1810
+    alias: ubuntu/cosmic/amd64
+
+  - name: test-Ubuntu1804
+    alias: ubuntu/bionic/amd64
+
+  - name: test-Ubuntu1710
+    alias: ubuntu/artful/amd64
+
+  - name: test-Ubuntu1604
+    alias: ubuntu/xenial/amd64
+
+  - name: test-Ubuntu1404
+    alias: ubuntu/trusty/amd64
+
+provisioner:
+  name: ansible
+  options:
+    v: true
+  config_options:
+    defaults:
+      callback_whitelist: profile_tasks
+  lint:
+    name: ansible-lint
+    options:
+      c: ${DEV_MOLECULE_RULES}/ansible-lint.yml
+
+scenario:
+  name: default
