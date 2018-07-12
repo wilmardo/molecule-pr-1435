@@ -26,7 +26,8 @@ install:
   - sudo lxc config set core.trust_password password
 
 script:
-  - sudo su travis -c 'molecule --debug converge'
+  -
+  - sudo molecule --debug converge
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
