@@ -22,7 +22,7 @@ install:
   - sudo pip install molecule
 
 script:
-  - sudo su travis -c 'molecule converge'
+  - sudo su travis -c 'molecule --debug converge'
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
