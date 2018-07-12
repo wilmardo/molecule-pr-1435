@@ -19,9 +19,9 @@ install:
   - sudo pip install molecule
   - sudo sh -c 'echo PATH=/snap/bin:$PATH >> /etc/environment';
   - while [ ! -S /var/snap/lxd/common/lxd/unix.socket ]; do echo "Waiting for LXD socket...";sleep 0.2;done;
-  - sudo su travis -c 'lxd init --auto';
-  - sudo su travis -c 'lxc config set core.https_address 127.0.0.1:8443'
-  - sudo su travis -c 'lxc config set core.trust_password password'
+  - sudo lxd init --auto;
+  - sudo lxc config set core.https_address 127.0.0.1:8443
+  - sudo lxc config set core.trust_password password
 
 script:
   - sudo su travis -c 'molecule --debug converge'
