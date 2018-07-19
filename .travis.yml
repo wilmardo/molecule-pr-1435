@@ -30,7 +30,7 @@ install:
   - sudo snap install lxd;
   - sudo sh -c 'echo PATH=/snap/bin:$PATH >> /etc/environment';
   - while [ ! -S /var/snap/lxd/common/lxd/unix.socket ]; do echo "Waiting for LXD socket...";sleep 0.2;done;
-  - bash -c "$(wget -qO - https://raw.githubusercontent.com/LANsible/ansible-dev-container/lxd/setup-lxd.sh)"
+  - sudo bash -c "$(wget -qO - https://raw.githubusercontent.com/LANsible/ansible-dev-container/lxd/setup-lxd.sh)"
 
 script:
   - docker run --net=host -it -v $(pwd):/data/$(basename ~+) -w /data/$(basename ~+) lansible/ansible-dev-container:test lxc remote list
