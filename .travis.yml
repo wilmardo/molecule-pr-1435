@@ -33,6 +33,8 @@ install:
   - bash -c "$(wget -qO - https://raw.githubusercontent.com/LANsible/ansible-dev-container/lxd/setup-lxd.sh)"
 
 script:
+  - docker run --net=host -it -v $(pwd):/data/$(basename ~+) -w /data/$(basename ~+) lansible/ansible-dev-container:test lxc remote list
+  - docker run --net=host -it -v $(pwd):/data/$(basename ~+) -w /data/$(basename ~+) lansible/ansible-dev-container:test lxc launch ubuntu:16.04
   - docker run --net=host -it -v $(pwd):/data/$(basename ~+) -w /data/$(basename ~+) lansible/ansible-dev-container:test molecule --debug converge
 
 notifications:
