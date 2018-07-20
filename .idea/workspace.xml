@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a1d0389-8cbb-4966-aa21-27d01c1376b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molecule/default/create.yml" beforeDir="false" afterPath="$PROJECT_DIR$/molecule/default/create.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molecule/default/molecule.yml" beforeDir="false" afterPath="$PROJECT_DIR$/molecule/default/molecule.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molecule/default/prepare.yml" beforeDir="false" afterPath="$PROJECT_DIR$/molecule/default/prepare.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,24 +29,25 @@
         <counts>
           <entry key="py" value="1" />
           <entry key="rst" value="1" />
-          <entry key="yml" value="7" />
+          <entry key="yml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Python" value="1" />
           <entry key="ReST" value="1" />
+          <entry key="YAML" value="1" />
           <entry key="YAML_EX" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="yml" value="2171" />
+          <entry key="yml" value="2172" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="YAML" value="124" />
+          <entry key="YAML" value="125" />
           <entry key="YAML_EX" value="2047" />
         </counts>
       </usages-collector>
@@ -56,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/molecule/default/create.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -70,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/molecule/default/molecule.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+            <state relative-caret-position="495">
+              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -92,19 +95,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/molecule/default/prepare.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+            <state relative-caret-position="466">
+              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="34" column="137" selection-start-line="34" selection-start-column="137" selection-end-line="34" selection-end-column="137" />
+            <state relative-caret-position="510">
+              <caret line="34" column="146" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="146" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/molecule/default/destroy.yml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -126,10 +134,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/tasks/main.yml" />
-        <option value="$PROJECT_DIR$/molecule/default/prepare.yml" />
-        <option value="$PROJECT_DIR$/molecule/default/molecule.yml" />
-        <option value="$PROJECT_DIR$/molecule/default/create.yml" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/molecule/default/prepare.yml" />
+        <option value="$PROJECT_DIR$/molecule/default/create.yml" />
+        <option value="$PROJECT_DIR$/molecule/default/molecule.yml" />
       </list>
     </option>
   </component>
@@ -246,28 +254,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/molecule/default/destroy.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../roles/ansible-role-taskserver/molecule/molecule-rules/rules/RoleRelativePath.py" />
-    <entry file="file://$PROJECT_DIR$/molecule/default/create.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/molecule/default/prepare.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -277,17 +268,34 @@
     <entry file="file://$PROJECT_DIR$/molecule/default/INSTALL.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/molecule/default/molecule.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/molecule/default/destroy.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="146" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/molecule/default/prepare.yml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
-          <caret line="34" column="137" selection-start-line="34" selection-start-column="137" selection-end-line="34" selection-end-column="137" />
+          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/molecule/default/create.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/molecule/default/molecule.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
         </state>
       </provider>
     </entry>
