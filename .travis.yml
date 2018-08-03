@@ -29,10 +29,10 @@ install:
   - sudo snap install lxd
   - sudo sudo bash -c 'echo PATH=/snap/bin:$PATH >> /etc/environment'
   - while [ ! -S /var/snap/lxd/common/lxd/unix.socket ]; do echo "Waiting for LXD socket...";sleep 0.2;done;
-  - curl https://raw.githubusercontent.com/LANsible/ansible-dev-container/lxd/setup-lxd.sh | sudo bash -s -- password
+  - sudo lxd init --auto
 
 script:
-  - docker run --net=host -it -v $(pwd):/data/$(basename ~+) -w /data/$(basename ~+) lansible/ansible-dev-container:test molecule --debug converge
+  - docker run -it -v $(pwd):/data/$(basename ~+) -v /var/lib/lxd/unix.socket:/var/lib/lxd/unix.socket -w /data/$(basename ~+) lansible/ansible-dev-container:test molecule --debug converge
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/

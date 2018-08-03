@@ -16,25 +16,25 @@
       raw: |
         if [ -x "$(command -v apt-get)" ]
         then
-          apt-get update && apt-get install -y python
+          apt-get update && apt-get install -y python python-setuptools
         elif [ -x "$(command -v yum)" ]
         then
-          yum install -y python
+          yum install -y python python-setuptools
         elif [ -x "$(command -v zypper)" ]
         then
-          zypper --non-interactive --gpg-auto-import-keys refresh && zypper --non-interactive install -y python python-xml
+          zypper --non-interactive --gpg-auto-import-keys refresh && zypper --non-interactive install -y python python-xml python-setuptools
         elif [ -x "$(command -v apk)" ]
         then
-          apk update && apk add python
+          apk update && apk add python py-setuptools
         elif [ -x "$(command -v pacman)" ]
         then
-          pacman -Syu --noconfirm python2
+          pacman -Syu --noconfirm python2 python-setuptools
         elif [ -x "$(command -v dnf)" ]
         then
-          dnf --assumeyes install python python-devel python2-dnf
+          dnf --assumeyes install python python-devel python2-dnf python-setuptools
         elif [ -x "$(command -v emerge)" ]
         then
-          emerge --ask n =dev-lang/python-2\* gentoolkit
+          emerge --ask n dev-lang/python-2 dev-python/setuptools gentoolkit
         fi
       when: "'not found' in python_version.stderr"
 
