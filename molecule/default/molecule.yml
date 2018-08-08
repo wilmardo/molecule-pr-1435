@@ -18,10 +18,6 @@ platforms:
 
   - name: test-Alpine38
     alias: alpine/3.8/amd64
-<<<<<<< HEAD
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
-=======
->>>>>>> add598091fba93689ace51456a6035109dc9025f
 
 #  - name: test-Alpine37
 #    alias: alpine/3.7/amd64
@@ -37,18 +33,13 @@ platforms:
 
   - name: test-Arch
     alias: archlinux/current/amd64
-<<<<<<< HEAD
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 
   - name: test-CentOS7
     alias: centos/7/amd64
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
-=======
 
   - name: test-CentOS7
     alias: centos/7/amd64
->>>>>>> add598091fba93689ace51456a6035109dc9025f
-#
+
 #  - name: test-CentOS6
 #    alias: centos/6/amd64
 #
@@ -57,74 +48,52 @@ platforms:
 #
 #  - name: test-Debian10
 #    alias: debian/buster/amd64
-#
+
   - name: test-Debian9
     alias: debian/stretch/amd64
-<<<<<<< HEAD
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
-=======
->>>>>>> add598091fba93689ace51456a6035109dc9025f
-#
+
 #  - name: test-Debian8
 #    alias: debian/jessie/amd64
 #
 #  - name: test-Debian7
 #    alias: debian/wheezy/amd64
-#
+
   - name: test-Fedora27
     alias: fedora/27/amd64
-<<<<<<< HEAD
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
-=======
->>>>>>> add598091fba93689ace51456a6035109dc9025f
-#
+
 #  - name: test-Fedora26
 #    alias: fedora/26/amd64
-#
+
   - name: test-Gentoo
     alias: gentoo/current/amd64
 
   - name: test-OpenSuse15
     alias: opensuse/15.0/amd64
-<<<<<<< HEAD
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 
   - name: test-OpenSuse42
     alias: opensuse/42.3/amd64
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
-#
+
   - name: test-Oracle7
     alias: oracle/7/amd64
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
-=======
 
   - name: test-OpenSuse42
     alias: opensuse/42.3/amd64
-#
+
   - name: test-Oracle7
     alias: oracle/7/amd64
->>>>>>> add598091fba93689ace51456a6035109dc9025f
-#
+
 #  - name: test-Oracle6
 #    alias: oracle/6/amd64
-#
+
   - name: test-Plamo6
     alias: plamo/6.x/amd64
-<<<<<<< HEAD
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
-=======
->>>>>>> add598091fba93689ace51456a6035109dc9025f
-#
+
 #  - name: test-Plamo5
 #    alias: plamo/5.x/amd64
-#
+
   - name: test-Sabayon
     alias: sabayon/current/amd64
-<<<<<<< HEAD
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
-=======
->>>>>>> add598091fba93689ace51456a6035109dc9025f
-#
+
 #  - name: test-UbuntuCore
 #    alias: ubuntu-core/16/amd64
 #
@@ -133,11 +102,7 @@ platforms:
 #
   - name: test-Ubuntu1804
     alias: ubuntu/bionic/amd64
-<<<<<<< HEAD
-#    url: unix:/var/snap/lxd/common/lxd/unix.socket
-=======
->>>>>>> add598091fba93689ace51456a6035109dc9025f
-#
+
 #  - name: test-Ubuntu1710
 #    alias: ubuntu/artful/amd64
 #
