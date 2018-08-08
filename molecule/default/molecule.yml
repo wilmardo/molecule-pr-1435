@@ -18,7 +18,7 @@ platforms:
 
   - name: test-Alpine38
     alias: alpine/3.8/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 
 #  - name: test-Alpine37
 #    alias: alpine/3.7/amd64
@@ -34,11 +34,11 @@ platforms:
 
   - name: test-Arch
     alias: archlinux/current/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 
   - name: test-CentOS7
     alias: centos/7/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 #
 #  - name: test-CentOS6
 #    alias: centos/6/amd64
@@ -51,7 +51,7 @@ platforms:
 #
   - name: test-Debian9
     alias: debian/stretch/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 #
 #  - name: test-Debian8
 #    alias: debian/jessie/amd64
@@ -61,40 +61,39 @@ platforms:
 #
   - name: test-Fedora27
     alias: fedora/27/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 #
 #  - name: test-Fedora26
 #    alias: fedora/26/amd64
 #
   - name: test-Gentoo
     alias: gentoo/current/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
 
   - name: test-OpenSuse15
     alias: opensuse/15.0/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 
   - name: test-OpenSuse42
     alias: opensuse/42.3/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 #
   - name: test-Oracle7
     alias: oracle/7/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 #
 #  - name: test-Oracle6
 #    alias: oracle/6/amd64
 #
   - name: test-Plamo6
     alias: plamo/6.x/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 #
 #  - name: test-Plamo5
 #    alias: plamo/5.x/amd64
 #
   - name: test-Sabayon
     alias: sabayon/current/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 #
 #  - name: test-UbuntuCore
 #    alias: ubuntu-core/16/amd64
@@ -104,7 +103,7 @@ platforms:
 #
   - name: test-Ubuntu1804
     alias: ubuntu/bionic/amd64
-    url: unix:/var/snap/lxd/common/lxd/unix.socket
+#    url: unix:/var/snap/lxd/common/lxd/unix.socket
 #
 #  - name: test-Ubuntu1710
 #    alias: ubuntu/artful/amd64
