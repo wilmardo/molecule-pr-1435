@@ -2,8 +2,7 @@
 - name: Prepare
   hosts: all
   gather_facts: false
-
-  pre_tasks:
+  tasks:
     - name: Test if Python is installed
       raw: python -V # execute Python
       register: python_version
