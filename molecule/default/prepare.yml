@@ -5,7 +5,7 @@
 
   pre_tasks:
     - name: Test if Python is installed
-      raw: python -c 'import sys; print(".".join(map(str, sys.version_info[:3])))' # gets Python version
+      raw: python -V # execute Python
       register: python_version
       changed_when: "'not found' in python_version.stderr"
       failed_when: false
@@ -32,14 +32,20 @@
           dnf --assumeyes install python python-devel python2-dnf
         elif [ -x "$(command -v emerge)" ]
         then
-          emerge --ask n dev-lang/python-2 gentoolkit
+          emerge --ask n dev-lang/python-2
         fi
       when: "'not found' in python_version.stderr"
 
     - name: Gathering Facts
       setup: #aka gather_facts
 
-    - name: Install packages because LXD containers are bare
+    - name: Install equery on Gentoo based containers when not available
+      raw: test -e /usr/bin/equery || emerge --ask n gentoolkit
+      register: equery_status
+      changed_when: equery_status.stdout != ''
+      when: ansible_os_family == 'Gentoo'
+
+    - name: Install some basic packages because LXD containers are bare
       package:
         name:
           - ca-certificates
